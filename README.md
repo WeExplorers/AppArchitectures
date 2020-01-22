@@ -49,12 +49,12 @@ MVVM 有其优点，也有其缺点，并不是万能的。在项目中，需要
 
 - 工作流程   
 
-<img src="Images/CoordinatorsWorkFlow.jpg" alt="Coordinators Workflow" style="zoom:50%;" />
+<img src="Resource/CoordinatorsWorkFlow.jpg" alt="Coordinators Workflow" style="zoom:50%;" />
 </br>
 
 - 整体架构  
 
-<img src="Images/CoordinatorsSystem.jpg" alt="Coordinators System Architecture" style="zoom:60%;" />
+<img src="Resource/CoordinatorsSystem.jpg" alt="Coordinators System Architecture" style="zoom:60%;" />
 
 看了上面两个图，是不是觉得很优雅，很清晰。是的，不过代码实现起来还是挺费劲的，哈哈。
 
@@ -98,7 +98,7 @@ RxSwift 是 [ReactiveX](http://reactivex.io) 的 Swift 版本，是一个可以�
 在任何情况下，ViewModel 在处理数据时都是单向流动的，即 Input 接受数据输入，Output 输出处理后的数据。但是如果 Output 里包含了 Subject ，ViewController 就可以通过调用 Ouput 相关 Subject 的 onNext 方法来达到输出数据的目的，这样数据流动就没有经过 ViewModel 进行处理了，这显然违背了 ViewModel 的设计原则，所以使用 Subject 时，需将对应的属性设置为私有。
   </br>
 
-<img src="Images/ViewModelInputsOutputs.png" alt="InputsOutputs" style="zoom:50%;" />
+<img src="Resource/ViewModelInputsOutputs.png" alt="InputsOutputs" style="zoom:50%;" />
 
 ```swift
 protocol ViewModelInputOutput {
