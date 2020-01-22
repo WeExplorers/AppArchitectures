@@ -3,16 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		20602EE123D7E48000203DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20602EE023D7E48000203DB8 /* AppDelegate.swift */; };
-		20602EE323D7E48000203DB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20602EE223D7E48000203DB8 /* SceneDelegate.swift */; };
-		20602EE523D7E48000203DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20602EE423D7E48000203DB8 /* ViewController.swift */; };
+		20602EE523D7E48000203DB8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20602EE423D7E48000203DB8 /* LoginViewController.swift */; };
 		20602EE823D7E48000203DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20602EE623D7E48000203DB8 /* Main.storyboard */; };
 		20602EEA23D7E48300203DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20602EE923D7E48300203DB8 /* Assets.xcassets */; };
 		20602EED23D7E48300203DB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20602EEB23D7E48300203DB8 /* LaunchScreen.storyboard */; };
+		20602F0423D7F6EB00203DB8 /* Flower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20602F0323D7F6EB00203DB8 /* Flower.swift */; };
+		20602F0623D7F6F200203DB8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20602F0523D7F6F200203DB8 /* User.swift */; };
+		20602F0923D8184B00203DB8 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20602F0823D8184B00203DB8 /* BaseViewModel.swift */; };
+		20602F0B23D8189500203DB8 /* ViewModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20602F0A23D8189500203DB8 /* ViewModelViewController.swift */; };
+		20602F0D23D81BA500203DB8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20602F0C23D81BA500203DB8 /* LoginViewModel.swift */; };
+		20602F1223D81CFC00203DB8 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20602F1123D81CFC00203DB8 /* Validator.swift */; };
+		20B8E2ED23D83ED2000FA789 /* RestfulApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B8E2EC23D83ED2000FA789 /* RestfulApi.swift */; };
 		2C29D3C44762886B43FA670E /* Pods_MVVMC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0958776E971DBFF12D4333 /* Pods_MVVMC.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,12 +26,18 @@
 		1F18CD74A1A2061BBB95CCC2 /* Pods-MVVMC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMC.debug.xcconfig"; path = "Target Support Files/Pods-MVVMC/Pods-MVVMC.debug.xcconfig"; sourceTree = "<group>"; };
 		20602EDE23D7E48000203DB8 /* MVVMC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20602EE023D7E48000203DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20602EE223D7E48000203DB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		20602EE423D7E48000203DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		20602EE423D7E48000203DB8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		20602EE723D7E48000203DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20602EE923D7E48300203DB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20602EEC23D7E48300203DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20602EEE23D7E48300203DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20602F0323D7F6EB00203DB8 /* Flower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flower.swift; sourceTree = "<group>"; };
+		20602F0523D7F6F200203DB8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		20602F0823D8184B00203DB8 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		20602F0A23D8189500203DB8 /* ViewModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelViewController.swift; sourceTree = "<group>"; };
+		20602F0C23D81BA500203DB8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		20602F1123D81CFC00203DB8 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		20B8E2EC23D83ED2000FA789 /* RestfulApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestfulApi.swift; sourceTree = "<group>"; };
 		948FDF74A533CE99CA615DF8 /* Pods-MVVMC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMC.release.xcconfig"; path = "Target Support Files/Pods-MVVMC/Pods-MVVMC.release.xcconfig"; sourceTree = "<group>"; };
 		EF0958776E971DBFF12D4333 /* Pods_MVVMC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,14 +76,100 @@
 			isa = PBXGroup;
 			children = (
 				20602EE023D7E48000203DB8 /* AppDelegate.swift */,
-				20602EE223D7E48000203DB8 /* SceneDelegate.swift */,
-				20602EE423D7E48000203DB8 /* ViewController.swift */,
-				20602EE623D7E48000203DB8 /* Main.storyboard */,
-				20602EE923D7E48300203DB8 /* Assets.xcassets */,
-				20602EEB23D7E48300203DB8 /* LaunchScreen.storyboard */,
-				20602EEE23D7E48300203DB8 /* Info.plist */,
+				20602F0723D7F81C00203DB8 /* Base */,
+				20602EFF23D7F43100203DB8 /* Model */,
+				20602F0E23D81C3800203DB8 /* Modules */,
+				20602F0F23D81CAB00203DB8 /* Networking */,
+				20602F1023D81CBE00203DB8 /* ThirdPart */,
+				20602EFD23D7F3E600203DB8 /* Supporting Files */,
 			);
 			path = MVVMC;
+			sourceTree = "<group>";
+		};
+		20602EFD23D7F3E600203DB8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20602EEE23D7E48300203DB8 /* Info.plist */,
+				20602EE923D7E48300203DB8 /* Assets.xcassets */,
+				20602EE623D7E48000203DB8 /* Main.storyboard */,
+				20602EEB23D7E48300203DB8 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20602EFE23D7F41200203DB8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				20602EE423D7E48000203DB8 /* LoginViewController.swift */,
+				20602F0C23D81BA500203DB8 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		20602EFF23D7F43100203DB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20602F0323D7F6EB00203DB8 /* Flower.swift */,
+				20602F0523D7F6F200203DB8 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		20602F0023D7F53800203DB8 /* FlowerList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FlowerList;
+			sourceTree = "<group>";
+		};
+		20602F0123D7F66900203DB8 /* FlowerDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FlowerDetail;
+			sourceTree = "<group>";
+		};
+		20602F0223D7F6CD00203DB8 /* FlowerSearch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FlowerSearch;
+			sourceTree = "<group>";
+		};
+		20602F0723D7F81C00203DB8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				20602F0823D8184B00203DB8 /* BaseViewModel.swift */,
+				20602F0A23D8189500203DB8 /* ViewModelViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		20602F0E23D81C3800203DB8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				20602EFE23D7F41200203DB8 /* Login */,
+				20602F0023D7F53800203DB8 /* FlowerList */,
+				20602F0223D7F6CD00203DB8 /* FlowerSearch */,
+				20602F0123D7F66900203DB8 /* FlowerDetail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		20602F0F23D81CAB00203DB8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				20B8E2EC23D83ED2000FA789 /* RestfulApi.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		20602F1023D81CBE00203DB8 /* ThirdPart */ = {
+			isa = PBXGroup;
+			children = (
+				20602F1123D81CFC00203DB8 /* Validator.swift */,
+			);
+			path = ThirdPart;
 			sourceTree = "<group>";
 		};
 		B7F3072E11B4E4026C74BF55 /* Frameworks */ = {
@@ -88,7 +186,6 @@
 				1F18CD74A1A2061BBB95CCC2 /* Pods-MVVMC.debug.xcconfig */,
 				948FDF74A533CE99CA615DF8 /* Pods-MVVMC.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,9 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20602EE523D7E48000203DB8 /* ViewController.swift in Sources */,
+				20602EE523D7E48000203DB8 /* LoginViewController.swift in Sources */,
+				20602F1223D81CFC00203DB8 /* Validator.swift in Sources */,
 				20602EE123D7E48000203DB8 /* AppDelegate.swift in Sources */,
-				20602EE323D7E48000203DB8 /* SceneDelegate.swift in Sources */,
+				20602F0B23D8189500203DB8 /* ViewModelViewController.swift in Sources */,
+				20602F0423D7F6EB00203DB8 /* Flower.swift in Sources */,
+				20602F0D23D81BA500203DB8 /* LoginViewModel.swift in Sources */,
+				20602F0623D7F6F200203DB8 /* User.swift in Sources */,
+				20B8E2ED23D83ED2000FA789 /* RestfulApi.swift in Sources */,
+				20602F0923D8184B00203DB8 /* BaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +458,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66PU5Q9BSZ;
 				INFOPLIST_FILE = MVVMC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,7 +478,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66PU5Q9BSZ;
 				INFOPLIST_FILE = MVVMC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
