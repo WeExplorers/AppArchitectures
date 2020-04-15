@@ -6,7 +6,7 @@
 //  Copyright © 2017 UPTech Team. All rights reserved.
 //
 
-@testable import RepoSearcher
+@testable import MVVMRxSwiftCoordinators
 import XCTest
 import RxTest
 import RxSwift
@@ -28,21 +28,21 @@ class LanguageListViewModelTests: XCTestCase {
     }
 
     func test_SelectLanguage_EmitsDidSelectLanguage() {
-        testScheduler.createHotObservable([next(300, "Java")])
+        testScheduler.createHotObservable([Recorded.next(300, "Java")])
             .bind(to: viewModel.selectLanguage)
             .disposed(by: disposeBag)
 
         let result = testScheduler.start { self.viewModel.didSelectLanguage }
-        XCTAssertEqual(result.events, [next(300, "Java")])
+        XCTAssertEqual(result.events, [Recorded.next(300, "Java")])
     }
 
     func test_Cancel_EmitsDidCancel() {
-        testScheduler.createHotObservable([next(300, ())])
+        testScheduler.createHotObservable([Recorded.next(300, ())])
             .bind(to: viewModel.cancel)
             .disposed(by: disposeBag)
 
         let result = testScheduler.start { self.viewModel.didCancel.map { true } }
-        XCTAssertEqual(result.events, [next(300, true)])
+        XCTAssertEqual(result.events, [Recorded.next(300, true)])
     }
 
     func test_Languages_EmitsResultOfRequest() {

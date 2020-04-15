@@ -6,7 +6,7 @@
 //  Copyright © 2017 UPTech Team. All rights reserved.
 //
 
-@testable import RepoSearcher
+@testable import MVVMRxSwift
 import RxSwift
 
 class GithubServiceMock: GithubService {

@@ -6,7 +6,7 @@
 //  Copyright © 2017 UPTech Team. All rights reserved.
 //
 
-@testable import RepoSearcher
+@testable import MVVMRxSwiftCoordinators
 import XCTest
 import RxTest
 import RxSwift
@@ -35,13 +35,13 @@ class RepositoryListViewModelTests: XCTestCase {
     func test_InitWithInitialLanguage_EmitsValidTitle() {
         viewModel = RepositoryListViewModel(initialLanguage: "Swift", githubService: githubService)
         let result = testScheduler.start { self.viewModel.title }
-        XCTAssertEqual(result.events, [next(200, "Swift")])
+        XCTAssertEqual(result.events, [Recorded.next(200, "Swift")])
     }
 
     func test_InitWithInitialLanguage_SendsValidRequest() {
         viewModel = RepositoryListViewModel(initialLanguage: "Swift", githubService: githubService)
 
-        testScheduler.createHotObservable([next(300, ())])
+        testScheduler.createHotObservable([Recorded.next(300, ())])
             .bind(to: viewModel.reload)
             .disposed(by: disposeBag)
 
@@ -57,7 +57,7 @@ class RepositoryListViewModelTests: XCTestCase {
                                         url: "https://www.apple.com")
         githubService.repositoriesReturnValue = .just([testRepository])
 
-        testScheduler.createHotObservable([next(300, ())])
+        testScheduler.createHotObservable([Recorded.next(300, ())])
             .bind(to: viewModel.reload)
             .disposed(by: disposeBag)
 
@@ -75,7 +75,7 @@ class RepositoryListViewModelTests: XCTestCase {
         let error = NSError(domain: "Test", code: 2, userInfo: nil)
         githubService.repositoriesReturnValue = .error(error)
 
-        testScheduler.createHotObservable([next(300, ())])
+        testScheduler.createHotObservable([Recorded.next(300, ())])
             .bind(to: viewModel.reload)
             .disposed(by: disposeBag)
 
@@ -84,42 +84,42 @@ class RepositoryListViewModelTests: XCTestCase {
             .disposed(by: disposeBag)
 
         let result = testScheduler.start { self.viewModel.alertMessage }
-        XCTAssertEqual(result.events, [next(300, error.localizedDescription)])
+        XCTAssertEqual(result.events, [Recorded.next(300, error.localizedDescription)])
     }
 
     func test_LanguageChange_UpdatesRepositories() {
         githubService.repositoriesReturnValue = .just([testRepository])
 
-        testScheduler.createHotObservable([next(300, ())])
+        testScheduler.createHotObservable([Recorded.next(300, ())])
             .bind(to: viewModel.reload)
             .disposed(by: disposeBag)
 
-        testScheduler.createHotObservable([next(400, "Objective-C")])
+        testScheduler.createHotObservable([Recorded.next(400, "Objective-C")])
             .bind(to: viewModel.setCurrentLanguage)
             .disposed(by: disposeBag)
 
         let result = testScheduler.start { self.viewModel.repositories.map({ _ in true }) }
-        XCTAssertEqual(result.events, [next(300, true), next(400, true)])
+        XCTAssertEqual(result.events, [Recorded.next(300, true), Recorded.next(400, true)])
     }
 
     func test_SelectRepository_EmitsShowRepository() {
         let repositoryToSelect = RepositoryViewModel(repository: testRepository)
-        let selectRepositoryObservable = testScheduler.createHotObservable([next(300, repositoryToSelect)])
+        let selectRepositoryObservable = testScheduler.createHotObservable([Recorded.next(300, repositoryToSelect)])
 
         selectRepositoryObservable
             .bind(to: viewModel.selectRepository)
             .disposed(by: disposeBag)
 
         let result = testScheduler.start { self.viewModel.showRepository.map { $0.absoluteString } }
-        XCTAssertEqual(result.events, [next(300, "https://www.apple.com")])
+        XCTAssertEqual(result.events, [Recorded.next(300, "https://www.apple.com")])
     }
 
     func test_ChooseLanguage_EmitsShowLanguageList() {
-        testScheduler.createHotObservable([next(300, ())])
+        testScheduler.createHotObservable([Recorded.next(300, ())])
             .bind(to: viewModel.chooseLanguage)
             .disposed(by: disposeBag)
 
         let result = testScheduler.start { self.viewModel.showLanguageList.map({ true }) }
-        XCTAssertEqual(result.events, [next(300, true)])
+        XCTAssertEqual(result.events, [Recorded.next(300, true)])
     }
 }

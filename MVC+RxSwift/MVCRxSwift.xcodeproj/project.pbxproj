@@ -118,7 +118,7 @@
 				8EB5F96B1F14D91100E46882 /* App */,
 				8EB5F97D1F14D91100E46882 /* Networking */,
 				8EB5F97B1F14D91100E46882 /* Models */,
-				8EB5F96E1F14D91100E46882 /* Classes */,
+				8EB5F96E1F14D91100E46882 /* Modules */,
 				8EB5F97F1F14D91100E46882 /* Resources */,
 			);
 			path = RepoSearcher;
@@ -141,13 +141,13 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		8EB5F96E1F14D91100E46882 /* Classes */ = {
+		8EB5F96E1F14D91100E46882 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				8EB5F9731F14D91100E46882 /* RepositoryList */,
 				8EB5F96F1F14D91100E46882 /* Languages */,
 			);
-			path = Classes;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		8EB5F96F1F14D91100E46882 /* Languages */ = {
@@ -310,17 +310,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MVCRxSwift/Pods-MVCRxSwift-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVCRxSwift/Pods-MVCRxSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVCRxSwift/Pods-MVCRxSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

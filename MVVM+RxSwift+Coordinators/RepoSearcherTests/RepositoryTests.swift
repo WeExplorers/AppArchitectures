@@ -6,7 +6,7 @@
 //  Copyright © 2017 UPTech Team. All rights reserved.
 //
 
-@testable import RepoSearcher
+@testable import MVVMRxSwiftCoordinators
 import XCTest
 
 class RepositoryTests: XCTestCase {

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import RepoSearcher
+@testable import MVC
 
 class RepoSearcherTests: XCTestCase {
     
