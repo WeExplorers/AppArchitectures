@@ -15,6 +15,20 @@ target 'MVCRxSwift' do
     pod 'RxCocoa'
 end
 
+target 'MVVMRxSwift' do
+    project 'MVVM+RxSwift/MVVMRxSwift.xcodeproj'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+end
+
+target 'MVVMRxSwiftCoordinators' do
+    project 'MVVM+RxSwift+Coordinators/MVVMRxSwiftCoordinators.xcodeproj'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxBlocking'
+    pod 'RxTest'
+end
+
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|

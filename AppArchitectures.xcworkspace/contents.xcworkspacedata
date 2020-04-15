@@ -8,6 +8,12 @@
       location = "group:MVC+RxSwift/MVCRxSwift.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:MVVM+RxSwift/MVVMRxSwift.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MVVM+RxSwift+Coordinators/MVVMRxSwiftCoordinators.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
