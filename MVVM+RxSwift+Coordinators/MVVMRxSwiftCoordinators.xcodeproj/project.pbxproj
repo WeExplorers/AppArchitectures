@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		207892D02448067700ECC812 /* InputOutputTransformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207892CF2448067700ECC812 /* InputOutputTransformable.swift */; };
 		39D8D3CB4C59B1DACF3463A5 /* Pods_MVVMRxSwiftCoordinatorsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3252F9C96E98736A11A30FA /* Pods_MVVMRxSwiftCoordinatorsTests.framework */; };
 		885F585242AF9ABEF4803662 /* Pods_MVVMRxSwiftCoordinators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC92C8C13DB9A8AF741260A8 /* Pods_MVVMRxSwiftCoordinators.framework */; };
 		8E1767C51F16726A0010DD4A /* LanguageListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1767C41F16726A0010DD4A /* LanguageListViewModelTests.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		06F222317E4E76DE7D230CB7 /* Pods-MVVMRxSwiftCoordinatorsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRxSwiftCoordinatorsTests.release.xcconfig"; path = "Target Support Files/Pods-MVVMRxSwiftCoordinatorsTests/Pods-MVVMRxSwiftCoordinatorsTests.release.xcconfig"; sourceTree = "<group>"; };
+		207892CF2448067700ECC812 /* InputOutputTransformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputOutputTransformable.swift; sourceTree = "<group>"; };
 		3241CC1A5F9E30EFA0DE8CD7 /* Pods-MVVMRxSwiftCoordinatorsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRxSwiftCoordinatorsTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMRxSwiftCoordinatorsTests/Pods-MVVMRxSwiftCoordinatorsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7115EE9AA86B6626BE2197F6 /* Pods-MVVMRxSwiftCoordinators.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRxSwiftCoordinators.release.xcconfig"; path = "Target Support Files/Pods-MVVMRxSwiftCoordinators/Pods-MVVMRxSwiftCoordinators.release.xcconfig"; sourceTree = "<group>"; };
 		8E1767C41F16726A0010DD4A /* LanguageListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListViewModelTests.swift; sourceTree = "<group>"; };
@@ -110,13 +112,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E2A2F7C1F17B2DC005C5FE7 /* Library */ = {
+		207892CC2447FB7300ECC812 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				8E2A2F7D1F17B2DC005C5FE7 /* BaseCoordinator.swift */,
-				8E2A2F7F1F17B2FE005C5FE7 /* StoryboardInitializable.swift */,
+				8E2A2F811F17B628005C5FE7 /* AppCoordinator.swift */,
+				207892CD2447FE8400ECC812 /* RepositoryList */,
 			);
-			path = Library;
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		207892CD2447FE8400ECC812 /* RepositoryList */ = {
+			isa = PBXGroup;
+			children = (
+				8E2A2F781F17B2B0005C5FE7 /* RepositoryListCoordinator.swift */,
+				207892CE2447FE8F00ECC812 /* LanguageList */,
+			);
+			name = RepositoryList;
+			sourceTree = "<group>";
+		};
+		207892CE2447FE8F00ECC812 /* LanguageList */ = {
+			isa = PBXGroup;
+			children = (
+				8E2A2F7A1F17B2C1005C5FE7 /* LanguageListCoordinator.swift */,
+			);
+			name = LanguageList;
 			sourceTree = "<group>";
 		};
 		8EB5F93F1F14D72500E46882 = {
@@ -142,11 +162,13 @@
 		8EB5F94A1F14D72500E46882 /* RepoSearcher */ = {
 			isa = PBXGroup;
 			children = (
-				8EB5F96B1F14D91100E46882 /* App */,
-				8E2A2F7C1F17B2DC005C5FE7 /* Library */,
+				8EB5F96D1F14D91100E46882 /* AppDelegate.swift */,
+				8E2A2F7F1F17B2FE005C5FE7 /* StoryboardInitializable.swift */,
+				207892CF2448067700ECC812 /* InputOutputTransformable.swift */,
+				207892CC2447FB7300ECC812 /* Coordinator */,
 				8EB5F97D1F14D91100E46882 /* Networking */,
 				8EB5F97B1F14D91100E46882 /* Models */,
-				8EB5F96E1F14D91100E46882 /* Modules */,
+				8EB5F96E1F14D91100E46882 /* Scenes */,
 				8EB5F97F1F14D91100E46882 /* Resources */,
 			);
 			path = RepoSearcher;
@@ -165,28 +187,18 @@
 			path = RepoSearcherTests;
 			sourceTree = "<group>";
 		};
-		8EB5F96B1F14D91100E46882 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				8EB5F96D1F14D91100E46882 /* AppDelegate.swift */,
-				8E2A2F811F17B628005C5FE7 /* AppCoordinator.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		8EB5F96E1F14D91100E46882 /* Modules */ = {
+		8EB5F96E1F14D91100E46882 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				8EB5F9731F14D91100E46882 /* RepositoryList */,
 				8EB5F96F1F14D91100E46882 /* Languages */,
 			);
-			path = Modules;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		8EB5F96F1F14D91100E46882 /* Languages */ = {
 			isa = PBXGroup;
 			children = (
-				8E2A2F7A1F17B2C1005C5FE7 /* LanguageListCoordinator.swift */,
 				8EB5F9711F14D91100E46882 /* LanguageListViewController.swift */,
 				8E2045951F16617900954E38 /* LanguageListViewModel.swift */,
 			);
@@ -196,7 +208,6 @@
 		8EB5F9731F14D91100E46882 /* RepositoryList */ = {
 			isa = PBXGroup;
 			children = (
-				8E2A2F781F17B2B0005C5FE7 /* RepositoryListCoordinator.swift */,
 				8EB5F9761F14D91100E46882 /* RepositoryListViewController.swift */,
 				8EB5F9741F14D91100E46882 /* RepositoryCell.swift */,
 				8E2045911F164F7E00954E38 /* RepositoryListViewModel.swift */,
@@ -454,6 +465,7 @@
 				8EB5F9851F14D91100E46882 /* LanguageListViewController.swift in Sources */,
 				8E2A2F7E1F17B2DC005C5FE7 /* BaseCoordinator.swift in Sources */,
 				8EB5F9831F14D91100E46882 /* AppDelegate.swift in Sources */,
+				207892D02448067700ECC812 /* InputOutputTransformable.swift in Sources */,
 				8EB5F9871F14D91100E46882 /* RepositoryCell.swift in Sources */,
 				8EB5F98D1F14D91100E46882 /* Repository.swift in Sources */,
 				8E2045931F164F7E00954E38 /* RepositoryListViewModel.swift in Sources */,

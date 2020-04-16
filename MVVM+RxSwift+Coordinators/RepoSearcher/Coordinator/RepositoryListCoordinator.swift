@@ -19,17 +19,19 @@ class RepositoryListCoordinator: BaseCoordinator<Void> {
     }
 
     override func start() -> Observable<Void> {
+        
         let viewModel = RepositoryListViewModel(initialLanguage: "Swift")
         let viewController = RepositoryListViewController.initFromStoryboard(name: "Main")
         let navigationController = UINavigationController(rootViewController: viewController)
 
         viewController.viewModel = viewModel
 
-        viewModel.showRepository
-            .subscribe(onNext: { [weak self] in self?.showRepository(by: $0, in: navigationController) })
-            .disposed(by: disposeBag)
+        viewModel.scene.showRepository
+            .subscribe(onNext: { [weak self] in
+                self?.showRepository(by: $0, in: navigationController)
+            }).disposed(by: disposeBag)
 
-        viewModel.showLanguageList
+        viewModel.scene.showLanguageList
             .flatMap { [weak self] _ -> Observable<String?> in
                 guard let `self` = self else { return .empty() }
                 return self.showLanguageList(on: viewController)

@@ -41,36 +41,32 @@ class RepositoryListViewController: UIViewController, StoryboardInitializable {
     private func setupBindings() {
 
         // View Model outputs to the View Controller
+        
+        let input = RepositoryListViewModel.Input(
+            chooseLanguage: chooseLanguageButton.rx.tap.asObservable(),
+            selectRepository: tableView.rx.modelSelected(RepositoryViewModel.self).asObservable(),
+            reload: refreshControl.rx.controlEvent(.valueChanged).asObservable()
+        )
+        
+        let output = viewModel.transform(input: input)
 
-        viewModel.repositories
+        output.repositories
             .observeOn(MainScheduler.instance)
-            .do(onNext: { [weak self] _ in self?.refreshControl.endRefreshing() })
+            .do(onNext: { [weak self] _ in
+                self?.refreshControl.endRefreshing()
+            })
             .bind(to: tableView.rx.items(cellIdentifier: "RepositoryCell", cellType: RepositoryCell.self)) { [weak self] (_, repo, cell) in
                 self?.setupRepositoryCell(cell, repository: repo)
-            }
-            .disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
 
-        viewModel.title
+        output.title
             .bind(to: navigationItem.rx.title)
             .disposed(by: disposeBag)
 
-        viewModel.alertMessage
-            .subscribe(onNext: { [weak self] in self?.presentAlert(message: $0) })
-            .disposed(by: disposeBag)
-
-        // View Controller UI actions to the View Model
-
-        refreshControl.rx.controlEvent(.valueChanged)
-            .bind(to: viewModel.reload)
-            .disposed(by: disposeBag)
-
-        chooseLanguageButton.rx.tap
-            .bind(to: viewModel.chooseLanguage)
-            .disposed(by: disposeBag)
-
-        tableView.rx.modelSelected(RepositoryViewModel.self)
-            .bind(to: viewModel.selectRepository)
-            .disposed(by: disposeBag)
+        output.alertMessage
+            .subscribe(onNext: { [weak self] in
+                self?.presentAlert(message: $0)
+            }).disposed(by: disposeBag)
     }
 
     private func setupRepositoryCell(_ cell: RepositoryCell, repository: RepositoryViewModel) {
