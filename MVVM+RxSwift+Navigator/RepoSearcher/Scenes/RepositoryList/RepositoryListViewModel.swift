@@ -13,11 +13,6 @@ import RxRelay
 class RepositoryListViewModel: InputOutputTransformable {
     
     struct Input {
-        /// Call to show language list screen.
-        let chooseLanguage: Observable<Void>
-
-        /// Call to open repository page.
-        let selectRepository: Observable<RepositoryViewModel>
 
         /// Call to reload repositories.
         let reload: Observable<Void>
@@ -34,37 +29,20 @@ class RepositoryListViewModel: InputOutputTransformable {
         /// Emits an error messages to be shown.
         let alertMessage: Observable<String>
     }
-    
-    struct Scene {
-        /// Emits an url of repository page to be shown.
-        let showRepository: Observable<URL>
-
-        /// Emits when we should show language list.
-        let showLanguageList: Observable<Void>
-    }
 
     /// Call to update current language. Causes reload of the repositories.
     var setCurrentLanguage: AnyObserver<String> {
         return currentLanguage.asObserver()
     }
     
-    let scene: Scene
-    
     fileprivate let githubService: GithubService
     fileprivate let disposeBag = DisposeBag()
-    
-    fileprivate let showRepository = PublishRelay<URL>()
-    fileprivate let showLanguageList = PublishRelay<Void>()
+
     fileprivate let currentLanguage: BehaviorSubject<String>
-    
-    deinit {
-        print("\(self) deinit")
-    }
 
     init(initialLanguage: String, githubService: GithubService = GithubService()) {
         self.githubService = githubService
         self.currentLanguage = BehaviorSubject(value: initialLanguage)
-        self.scene = Scene(showRepository: showRepository.asObservable(), showLanguageList: showLanguageList.asObservable())
     }
     
     func transform(input: Input) -> Output {
@@ -81,9 +59,6 @@ class RepositoryListViewModel: InputOutputTransformable {
             // 将仓库列表转换成 RepositoryViewModel
             repositories.map { RepositoryViewModel(repository: $0) }
         }
-        
-        input.chooseLanguage.bind(to: showLanguageList).disposed(by: disposeBag)
-        input.selectRepository.map { $0.url }.bind(to: showRepository).disposed(by: disposeBag)
         
         return Output(
             repositories: repositories,

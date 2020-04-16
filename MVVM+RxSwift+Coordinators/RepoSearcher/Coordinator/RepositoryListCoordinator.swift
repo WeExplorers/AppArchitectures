@@ -38,6 +38,7 @@ class RepositoryListCoordinator: BaseCoordinator<Void> {
             }
             .filter { $0 != nil }
             .map { $0! }
+            .observeOn(MainScheduler.instance)
             .bind(to: viewModel.setCurrentLanguage)
             .disposed(by: disposeBag)
 
@@ -49,7 +50,7 @@ class RepositoryListCoordinator: BaseCoordinator<Void> {
 
     private func showRepository(by url: URL, in navigationController: UINavigationController) {
         let safariViewController = SFSafariViewController(url: url)
-        navigationController.pushViewController(safariViewController, animated: true)
+        navigationController.present(safariViewController, animated: true, completion: nil)
     }
 
     private func showLanguageList(on rootViewController: UIViewController) -> Observable<String?> {

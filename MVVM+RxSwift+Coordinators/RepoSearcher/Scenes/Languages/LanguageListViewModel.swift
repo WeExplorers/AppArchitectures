@@ -8,28 +8,43 @@
 
 import RxSwift
 
-class LanguageListViewModel {
+class LanguageListViewModel: InputOutputTransformable {
 
-    // MARK: - Inputs
+    struct Input {
+        let selectLanguage: Observable<String>
+        let cancel: Observable<Void>
+    }
+    
+    struct Output {
+        let languages: Observable<[String]>
+    }
+    
+    struct Scene {
+        let didSelectLanguage: Observable<String>
+        let didCancel: Observable<Void>
+    }
+    
 
-    let selectLanguage: AnyObserver<String>
-    let cancel: AnyObserver<Void>
-
-    // MARK: - Outputs
-
-    let languages: Observable<[String]>
-    let didSelectLanguage: Observable<String>
-    let didCancel: Observable<Void>
+    let scene: Scene
+    
+    private let selectLanguage = PublishSubject<String>()
+    private let cancel = PublishSubject<Void>()
+    private let service: GithubService
+    private let disposeBag = DisposeBag()
+    
+    deinit {
+        print("\(self) deinit")
+    }
 
     init(githubService: GithubService = GithubService()) {
-        self.languages = githubService.getLanguageList()
-
-        let _selectLanguage = PublishSubject<String>()
-        self.selectLanguage = _selectLanguage.asObserver()
-        self.didSelectLanguage = _selectLanguage.asObservable()
-
-        let _cancel = PublishSubject<Void>()
-        self.cancel = _cancel.asObserver()
-        self.didCancel = _cancel.asObservable()
+        self.service = githubService
+        self.scene = Scene(didSelectLanguage: selectLanguage.asObservable(), didCancel: cancel.asObservable())
+    }
+    
+    func transform(input: Input) -> Output {
+        input.selectLanguage.bind(to: selectLanguage).disposed(by: disposeBag)
+        input.cancel.bind(to: cancel).disposed(by: disposeBag)
+        
+        return Output(languages: service.getLanguageList())
     }
 }

@@ -29,6 +29,12 @@ target 'MVVMRxSwiftTests' do
     pod 'RxTest'
 end
 
+target 'MVVMRxSwiftNavigator' do
+    project 'MVVM+RxSwift+Navigator/MVVMRxSwiftNavigator.xcodeproj'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+end
+
 target 'MVVMRxSwiftCoordinators' do
     project 'MVVM+RxSwift+Coordinators/MVVMRxSwiftCoordinators.xcodeproj'
     pod 'RxSwift'

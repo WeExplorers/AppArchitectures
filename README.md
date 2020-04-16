@@ -225,7 +225,7 @@ final class FaceScanningViewController: UIViewController {
 
 ## 项目实战
 
-最后，我们结合 MVVM，Coordinator 和 RxSwift 来进行一个纯 MVVM 的小项目。实现过程我就不在这里详细的阐述了，直接上代码，代码才是王道，哈哈。
+这里我直接引用了大神的 [Sample](https://github.com/uptechteam/Coordinator-MVVM-Rx-Example/tree/master/Coordinators-MVVM-Rx), 在此基础上做了些改造。
 
 [MVVM + Coordinator + RxSwift 项目实战]()
 

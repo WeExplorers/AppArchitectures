@@ -11,6 +11,9 @@
       location = "group:MVVM+RxSwift/MVVMRxSwift.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:MVVM+RxSwift+Navigator/MVVMRxSwiftNavigator.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MVVM+RxSwift+Coordinators/MVVMRxSwiftCoordinators.xcodeproj">
    </FileRef>
    <FileRef

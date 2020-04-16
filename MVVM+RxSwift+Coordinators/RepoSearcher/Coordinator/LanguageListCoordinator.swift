@@ -33,13 +33,16 @@ class LanguageListCoordinator: BaseCoordinator<LanguageListCoordinationResult> {
         let viewModel = LanguageListViewModel()
         viewController.viewModel = viewModel
 
-        let cancel = viewModel.didCancel.map { _ in CoordinationResult.cancel }
-        let language = viewModel.didSelectLanguage.map { CoordinationResult.language($0) }
+        let cancel = viewModel.scene.didCancel.map { _ in CoordinationResult.cancel }
+        let language = viewModel.scene.didSelectLanguage.map { CoordinationResult.language($0) }
 
         rootViewController.present(navigationController, animated: true)
 
         return Observable.merge(cancel, language)
+            .observeOn(MainScheduler.instance)
             .take(1)
-            .do(onNext: { [weak self] _ in self?.rootViewController.dismiss(animated: true) })
+            .do(onNext: { [weak self] _ in
+                self?.rootViewController.dismiss(animated: true)
+            })
     }
 }

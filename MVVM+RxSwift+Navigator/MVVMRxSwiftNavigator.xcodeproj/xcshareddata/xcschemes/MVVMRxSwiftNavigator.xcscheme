@@ -15,9 +15,23 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8EB5F9471F14D72500E46882"
-               BuildableName = "MVVMRxSwiftCoordinators.app"
-               BlueprintName = "MVVMRxSwiftCoordinators"
-               ReferencedContainer = "container:MVVMRxSwiftCoordinators.xcodeproj">
+               BuildableName = "MVVMRxSwiftNavigator.app"
+               BlueprintName = "MVVMRxSwiftNavigator"
+               ReferencedContainer = "container:MVVMRxSwiftNavigator.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8EB5F95B1F14D72500E46882"
+               BuildableName = "MVVMRxSwiftNavigatorTests.xctest"
+               BlueprintName = "MVVMRxSwiftNavigatorTests"
+               ReferencedContainer = "container:MVVMRxSwiftNavigator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,6 +42,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8EB5F95B1F14D72500E46882"
+               BuildableName = "MVVMRxSwiftNavigatorTests.xctest"
+               BlueprintName = "MVVMRxSwiftNavigatorTests"
+               ReferencedContainer = "container:MVVMRxSwiftNavigator.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -45,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8EB5F9471F14D72500E46882"
-            BuildableName = "MVVMRxSwiftCoordinators.app"
-            BlueprintName = "MVVMRxSwiftCoordinators"
-            ReferencedContainer = "container:MVVMRxSwiftCoordinators.xcodeproj">
+            BuildableName = "MVVMRxSwiftNavigator.app"
+            BlueprintName = "MVVMRxSwiftNavigator"
+            ReferencedContainer = "container:MVVMRxSwiftNavigator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +86,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8EB5F9471F14D72500E46882"
-            BuildableName = "MVVMRxSwiftCoordinators.app"
-            BlueprintName = "MVVMRxSwiftCoordinators"
-            ReferencedContainer = "container:MVVMRxSwiftCoordinators.xcodeproj">
+            BuildableName = "MVVMRxSwiftNavigator.app"
+            BlueprintName = "MVVMRxSwiftNavigator"
+            ReferencedContainer = "container:MVVMRxSwiftNavigator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

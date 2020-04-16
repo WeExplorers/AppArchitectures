@@ -12,7 +12,9 @@ import RxCocoa
 import SafariServices
 
 /// Shows a list of most starred repositories filtered by language.
-class RepositoryListViewController: UIViewController, StoryboardInitializable {
+class RepositoryListViewController: UIViewController, StoryboardInitializable, Navigatable {
+    
+    var navigator: Navigator!
 
     @IBOutlet private weak var tableView: UITableView!
     private let chooseLanguageButton = UIBarButtonItem(barButtonSystemItem: .organize, target: nil, action: nil)
@@ -20,10 +22,6 @@ class RepositoryListViewController: UIViewController, StoryboardInitializable {
 
     var viewModel: RepositoryListViewModel!
     private let disposeBag = DisposeBag()
-    
-    deinit {
-        print("\(self) deinit")
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +44,7 @@ class RepositoryListViewController: UIViewController, StoryboardInitializable {
 
         // View Model outputs to the View Controller
         
-        let input = RepositoryListViewModel.Input(
-            chooseLanguage: chooseLanguageButton.rx.tap.asObservable(),
-            selectRepository: tableView.rx.modelSelected(RepositoryViewModel.self).asObservable(),
-            reload: refreshControl.rx.controlEvent(.valueChanged).asObservable()
-        )
-        
+        let input = RepositoryListViewModel.Input(reload: refreshControl.rx.controlEvent(.valueChanged).asObservable())
         let output = viewModel.transform(input: input)
 
         output.repositories
@@ -68,9 +61,19 @@ class RepositoryListViewController: UIViewController, StoryboardInitializable {
             .disposed(by: disposeBag)
 
         output.alertMessage
-            .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
                 self?.presentAlert(message: $0)
+            }).disposed(by: disposeBag)
+        
+        chooseLanguageButton.rx.tap
+            .subscribe(onNext: { [unowned self]  (_) in
+                let vm = LanguageListViewModel()
+                self.navigator.show(segue: .languages(vm), sender: self, transition: .modal)
+            }).disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(RepositoryViewModel.self)
+            .subscribe(onNext: { [unowned self] (vm) in
+                self.navigator.show(segue: .repository(vm.url), sender: self, transition: .detail)
             }).disposed(by: disposeBag)
     }
 
