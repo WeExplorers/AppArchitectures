@@ -28,28 +28,37 @@ class LanguageListViewModelTests: XCTestCase {
     }
 
     func test_SelectLanguage_EmitsDidSelectLanguage() {
-        testScheduler.createHotObservable([Recorded.next(300, "Java")])
-            .bind(to: viewModel.selectLanguage)
-            .disposed(by: disposeBag)
-
-        let result = testScheduler.start { self.viewModel.didSelectLanguage }
+        
+        let selectLanguageTrigger = testScheduler.createHotObservable([Recorded.next(300, "Java")]).asObservable()
+        let cancelTrigger = PublishSubject<Void>().asObservable()
+        let input = LanguageListViewModel.Input(selectLanguage: selectLanguageTrigger, cancel: cancelTrigger)
+        let _ = viewModel.transform(input: input)
+        
+        let result = testScheduler.start { self.viewModel.scene.didSelectLanguage }
         XCTAssertEqual(result.events, [Recorded.next(300, "Java")])
     }
 
     func test_Cancel_EmitsDidCancel() {
-        testScheduler.createHotObservable([Recorded.next(300, ())])
-            .bind(to: viewModel.cancel)
-            .disposed(by: disposeBag)
+        
+        let selectLanguageTrigger = PublishSubject<String>().asObservable()
+        let cancelTrigger = testScheduler.createHotObservable([Recorded.next(300, ())]).asObservable()
+        let input = LanguageListViewModel.Input(selectLanguage: selectLanguageTrigger, cancel: cancelTrigger)
+        let _ = viewModel.transform(input: input)
 
-        let result = testScheduler.start { self.viewModel.didCancel.map { true } }
+        let result = testScheduler.start { self.viewModel.scene.didCancel.map { true } }
         XCTAssertEqual(result.events, [Recorded.next(300, true)])
     }
 
     func test_Languages_EmitsResultOfRequest() {
+        
         githubService.languageListReturnValue = .just(["Swift", "Objective-C"])
         viewModel = LanguageListViewModel(githubService: githubService)
-
-        let result = testScheduler.start { self.viewModel.languages }
+        
+        let selectLanguageTrigger = PublishSubject<String>()
+        let cancelTrigger = PublishSubject<Void>()
+        let input = LanguageListViewModel.Input(selectLanguage: selectLanguageTrigger.asObservable(), cancel: cancelTrigger.asObservable())
+        let output = viewModel.transform(input: input)
+        let result = testScheduler.start { output.languages }
 
         XCTAssertEqual(result.events.count, 2)
 

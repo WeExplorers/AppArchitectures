@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8EB5F9611F14D72500E46882 /* RepoSearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB5F9601F14D72500E46882 /* RepoSearcherTests.swift */; };
 		8EB5F9831F14D91100E46882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB5F96D1F14D91100E46882 /* AppDelegate.swift */; };
 		8EB5F9851F14D91100E46882 /* LanguageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB5F9711F14D91100E46882 /* LanguageListViewController.swift */; };
 		8EB5F9871F14D91100E46882 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB5F9741F14D91100E46882 /* RepositoryCell.swift */; };
@@ -19,16 +18,6 @@
 		8EB5F99D1F14DB1E00E46882 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB5F99A1F14DB1E00E46882 /* Main.storyboard */; };
 		A98376435BA0AB5CEF1D7840 /* Pods_MVCRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9EB01C4284A8F7530AC046 /* Pods_MVCRxSwift.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8EB5F95D1F14D72500E46882 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8EB5F9401F14D72500E46882 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EB5F9471F14D72500E46882;
-			remoteInfo = RepoSearcher;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		207892CB2447210200ECC812 /* Embed Frameworks */ = {
@@ -47,9 +36,6 @@
 		2D9EB01C4284A8F7530AC046 /* Pods_MVCRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVCRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5900D74B550CDEFD15522F71 /* Pods-MVCRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCRxSwift.release.xcconfig"; path = "Target Support Files/Pods-MVCRxSwift/Pods-MVCRxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		8EB5F9481F14D72500E46882 /* MVCRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EB5F95C1F14D72500E46882 /* MVCRxSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVCRxSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EB5F9601F14D72500E46882 /* RepoSearcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearcherTests.swift; sourceTree = "<group>"; };
-		8EB5F9621F14D72500E46882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EB5F96D1F14D91100E46882 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EB5F9711F14D91100E46882 /* LanguageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListViewController.swift; sourceTree = "<group>"; };
 		8EB5F9741F14D91100E46882 /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
@@ -72,13 +58,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8EB5F9591F14D72500E46882 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				8EB5F94A1F14D72500E46882 /* RepoSearcher */,
-				8EB5F95F1F14D72500E46882 /* RepoSearcherTests */,
 				8EB5F9491F14D72500E46882 /* Products */,
 				8EB5F9911F14D97100E46882 /* Frameworks */,
 				6E53242E41236FFDBFF220BD /* Pods */,
@@ -107,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				8EB5F9481F14D72500E46882 /* MVCRxSwift.app */,
-				8EB5F95C1F14D72500E46882 /* MVCRxSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,15 +99,6 @@
 				8EB5F97F1F14D91100E46882 /* Resources */,
 			);
 			path = RepoSearcher;
-			sourceTree = "<group>";
-		};
-		8EB5F95F1F14D72500E46882 /* RepoSearcherTests */ = {
-			isa = PBXGroup;
-			children = (
-				8EB5F9601F14D72500E46882 /* RepoSearcherTests.swift */,
-				8EB5F9621F14D72500E46882 /* Info.plist */,
-			);
-			path = RepoSearcherTests;
 			sourceTree = "<group>";
 		};
 		8EB5F96B1F14D91100E46882 /* App */ = {
@@ -225,24 +193,6 @@
 			productReference = 8EB5F9481F14D72500E46882 /* MVCRxSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8EB5F95B1F14D72500E46882 /* MVCRxSwiftTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8EB5F9681F14D72500E46882 /* Build configuration list for PBXNativeTarget "MVCRxSwiftTests" */;
-			buildPhases = (
-				8EB5F9581F14D72500E46882 /* Sources */,
-				8EB5F9591F14D72500E46882 /* Frameworks */,
-				8EB5F95A1F14D72500E46882 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8EB5F95E1F14D72500E46882 /* PBXTargetDependency */,
-			);
-			name = MVCRxSwiftTests;
-			productName = RepoSearcherTests;
-			productReference = 8EB5F95C1F14D72500E46882 /* MVCRxSwiftTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -256,12 +206,6 @@
 					8EB5F9471F14D72500E46882 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
-					};
-					8EB5F95B1F14D72500E46882 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = E6856DRNEB;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 8EB5F9471F14D72500E46882;
 					};
 				};
 			};
@@ -279,7 +223,6 @@
 			projectRoot = "";
 			targets = (
 				8EB5F9471F14D72500E46882 /* MVCRxSwift */,
-				8EB5F95B1F14D72500E46882 /* MVCRxSwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -292,13 +235,6 @@
 				8EB5F99D1F14DB1E00E46882 /* Main.storyboard in Resources */,
 				8EB5F98F1F14D91100E46882 /* Assets.xcassets in Resources */,
 				8EB5F99C1F14DB1E00E46882 /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8EB5F95A1F14D72500E46882 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,23 +296,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8EB5F9581F14D72500E46882 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8EB5F9611F14D72500E46882 /* RepoSearcherTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8EB5F95E1F14D72500E46882 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8EB5F9471F14D72500E46882 /* MVCRxSwift */;
-			targetProxy = 8EB5F95D1F14D72500E46882 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8EB5F9981F14DB1E00E46882 /* LaunchScreen.storyboard */ = {
@@ -558,44 +478,6 @@
 			};
 			name = Release;
 		};
-		8EB5F9691F14D72500E46882 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = E6856DRNEB;
-				INFOPLIST_FILE = RepoSearcherTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uptechteam.RepoSearcherTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVCRxSwift.app/MVCRxSwift";
-			};
-			name = Debug;
-		};
-		8EB5F96A1F14D72500E46882 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = E6856DRNEB;
-				INFOPLIST_FILE = RepoSearcherTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uptechteam.RepoSearcherTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVCRxSwift.app/MVCRxSwift";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -613,15 +495,6 @@
 			buildConfigurations = (
 				8EB5F9661F14D72500E46882 /* Debug */,
 				8EB5F9671F14D72500E46882 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8EB5F9681F14D72500E46882 /* Build configuration list for PBXNativeTarget "MVCRxSwiftTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8EB5F9691F14D72500E46882 /* Debug */,
-				8EB5F96A1F14D72500E46882 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

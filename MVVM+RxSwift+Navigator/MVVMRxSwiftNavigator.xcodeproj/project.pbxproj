@@ -10,15 +10,10 @@
 		207892D02448067700ECC812 /* InputOutputTransformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207892CF2448067700ECC812 /* InputOutputTransformable.swift */; };
 		209AA4F72448485400CAEED4 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209AA4F62448485400CAEED4 /* Navigator.swift */; };
 		209AA4F924484C1C00CAEED4 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209AA4F824484C1C00CAEED4 /* Application.swift */; };
-		8E1767C51F16726A0010DD4A /* LanguageListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1767C41F16726A0010DD4A /* LanguageListViewModelTests.swift */; };
-		8E1767C71F1749190010DD4A /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1767C61F1749190010DD4A /* RepositoryTests.swift */; };
 		8E2045931F164F7E00954E38 /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2045911F164F7E00954E38 /* RepositoryListViewModel.swift */; };
 		8E2045941F164F7E00954E38 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2045921F164F7E00954E38 /* RepositoryViewModel.swift */; };
 		8E2045961F16617900954E38 /* LanguageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2045951F16617900954E38 /* LanguageListViewModel.swift */; };
 		8E2A2F801F17B2FE005C5FE7 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A2F7F1F17B2FE005C5FE7 /* StoryboardInitializable.swift */; };
-		8E57F1921F16674C00F4DCE7 /* RepositoryListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57F1911F16674C00F4DCE7 /* RepositoryListViewModelTests.swift */; };
-		8E57F1941F1667EE00F4DCE7 /* GithubServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57F1931F1667EE00F4DCE7 /* GithubServiceMock.swift */; };
-		8EB5F9611F14D72500E46882 /* RepositoryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB5F9601F14D72500E46882 /* RepositoryViewModelTests.swift */; };
 		8EB5F9831F14D91100E46882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB5F96D1F14D91100E46882 /* AppDelegate.swift */; };
 		8EB5F9851F14D91100E46882 /* LanguageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB5F9711F14D91100E46882 /* LanguageListViewController.swift */; };
 		8EB5F9871F14D91100E46882 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB5F9741F14D91100E46882 /* RepositoryCell.swift */; };
@@ -31,28 +26,6 @@
 		B75B1376FD2146CC47A0FA3E /* Pods_MVVMRxSwiftNavigator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4612A76D4830A48A97E87A3 /* Pods_MVVMRxSwiftNavigator.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8EB5F95D1F14D72500E46882 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8EB5F9401F14D72500E46882 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EB5F9471F14D72500E46882;
-			remoteInfo = RepoSearcher;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		8E57F1881F16670A00F4DCE7 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		1404AD9D99E00C52BB169F71 /* Pods-MVVMRxSwiftNavigator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRxSwiftNavigator.release.xcconfig"; path = "Target Support Files/Pods-MVVMRxSwiftNavigator/Pods-MVVMRxSwiftNavigator.release.xcconfig"; sourceTree = "<group>"; };
 		207892CF2448067700ECC812 /* InputOutputTransformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputOutputTransformable.swift; sourceTree = "<group>"; };
@@ -60,18 +33,11 @@
 		209AA4F824484C1C00CAEED4 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		47D4BCF876B3E2F3559AF521 /* Pods-MVVMRxSwiftNavigator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRxSwiftNavigator.debug.xcconfig"; path = "Target Support Files/Pods-MVVMRxSwiftNavigator/Pods-MVVMRxSwiftNavigator.debug.xcconfig"; sourceTree = "<group>"; };
 		7115EE9AA86B6626BE2197F6 /* Pods-MVVMRxSwiftCoordinators.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRxSwiftCoordinators.release.xcconfig"; path = "Target Support Files/Pods-MVVMRxSwiftCoordinators/Pods-MVVMRxSwiftCoordinators.release.xcconfig"; sourceTree = "<group>"; };
-		8E1767C41F16726A0010DD4A /* LanguageListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListViewModelTests.swift; sourceTree = "<group>"; };
-		8E1767C61F1749190010DD4A /* RepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		8E2045911F164F7E00954E38 /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
 		8E2045921F164F7E00954E38 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
 		8E2045951F16617900954E38 /* LanguageListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListViewModel.swift; sourceTree = "<group>"; };
 		8E2A2F7F1F17B2FE005C5FE7 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
-		8E57F1911F16674C00F4DCE7 /* RepositoryListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModelTests.swift; sourceTree = "<group>"; };
-		8E57F1931F1667EE00F4DCE7 /* GithubServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubServiceMock.swift; sourceTree = "<group>"; };
 		8EB5F9481F14D72500E46882 /* MVVMRxSwiftNavigator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMRxSwiftNavigator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EB5F95C1F14D72500E46882 /* MVVMRxSwiftNavigatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMRxSwiftNavigatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EB5F9601F14D72500E46882 /* RepositoryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModelTests.swift; sourceTree = "<group>"; };
-		8EB5F9621F14D72500E46882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EB5F96D1F14D91100E46882 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EB5F9711F14D91100E46882 /* LanguageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListViewController.swift; sourceTree = "<group>"; };
 		8EB5F9741F14D91100E46882 /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
@@ -95,13 +61,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8EB5F9591F14D72500E46882 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -117,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				8EB5F94A1F14D72500E46882 /* RepoSearcher */,
-				8EB5F95F1F14D72500E46882 /* RepoSearcherTests */,
 				8EB5F9491F14D72500E46882 /* Products */,
 				8EB5F9911F14D97100E46882 /* Frameworks */,
 				F640A1F718547FA43E540090 /* Pods */,
@@ -128,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				8EB5F9481F14D72500E46882 /* MVVMRxSwiftNavigator.app */,
-				8EB5F95C1F14D72500E46882 /* MVVMRxSwiftNavigatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,19 +104,6 @@
 				8EB5F97F1F14D91100E46882 /* Resources */,
 			);
 			path = RepoSearcher;
-			sourceTree = "<group>";
-		};
-		8EB5F95F1F14D72500E46882 /* RepoSearcherTests */ = {
-			isa = PBXGroup;
-			children = (
-				8EB5F9621F14D72500E46882 /* Info.plist */,
-				8E57F1931F1667EE00F4DCE7 /* GithubServiceMock.swift */,
-				8E1767C61F1749190010DD4A /* RepositoryTests.swift */,
-				8EB5F9601F14D72500E46882 /* RepositoryViewModelTests.swift */,
-				8E57F1911F16674C00F4DCE7 /* RepositoryListViewModelTests.swift */,
-				8E1767C41F16726A0010DD4A /* LanguageListViewModelTests.swift */,
-			);
-			path = RepoSearcherTests;
 			sourceTree = "<group>";
 		};
 		8EB5F96E1F14D91100E46882 /* Scenes */ = {
@@ -260,25 +204,6 @@
 			productReference = 8EB5F9481F14D72500E46882 /* MVVMRxSwiftNavigator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8EB5F95B1F14D72500E46882 /* MVVMRxSwiftNavigatorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8EB5F9681F14D72500E46882 /* Build configuration list for PBXNativeTarget "MVVMRxSwiftNavigatorTests" */;
-			buildPhases = (
-				8EB5F9581F14D72500E46882 /* Sources */,
-				8EB5F9591F14D72500E46882 /* Frameworks */,
-				8EB5F95A1F14D72500E46882 /* Resources */,
-				8E57F1881F16670A00F4DCE7 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8EB5F95E1F14D72500E46882 /* PBXTargetDependency */,
-			);
-			name = MVVMRxSwiftNavigatorTests;
-			productName = RepoSearcherTests;
-			productReference = 8EB5F95C1F14D72500E46882 /* MVVMRxSwiftNavigatorTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -292,12 +217,6 @@
 					8EB5F9471F14D72500E46882 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
-					};
-					8EB5F95B1F14D72500E46882 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = E6856DRNEB;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 8EB5F9471F14D72500E46882;
 					};
 				};
 			};
@@ -315,7 +234,6 @@
 			projectRoot = "";
 			targets = (
 				8EB5F9471F14D72500E46882 /* MVVMRxSwiftNavigator */,
-				8EB5F95B1F14D72500E46882 /* MVVMRxSwiftNavigatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -328,13 +246,6 @@
 				8EB5F99D1F14DB1E00E46882 /* Main.storyboard in Resources */,
 				8EB5F98F1F14D91100E46882 /* Assets.xcassets in Resources */,
 				8EB5F99C1F14DB1E00E46882 /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8EB5F95A1F14D72500E46882 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,27 +314,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8EB5F9581F14D72500E46882 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8E1767C51F16726A0010DD4A /* LanguageListViewModelTests.swift in Sources */,
-				8E57F1941F1667EE00F4DCE7 /* GithubServiceMock.swift in Sources */,
-				8E57F1921F16674C00F4DCE7 /* RepositoryListViewModelTests.swift in Sources */,
-				8E1767C71F1749190010DD4A /* RepositoryTests.swift in Sources */,
-				8EB5F9611F14D72500E46882 /* RepositoryViewModelTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8EB5F95E1F14D72500E46882 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8EB5F9471F14D72500E46882 /* MVVMRxSwiftNavigator */;
-			targetProxy = 8EB5F95D1F14D72500E46882 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8EB5F9981F14DB1E00E46882 /* LaunchScreen.storyboard */ = {
@@ -601,44 +492,6 @@
 			};
 			name = Release;
 		};
-		8EB5F9691F14D72500E46882 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = E6856DRNEB;
-				INFOPLIST_FILE = RepoSearcherTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uptechteam.RepoSearcherTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVMRxSwiftNavigator.app/MVVMRxSwiftNavigator";
-			};
-			name = Debug;
-		};
-		8EB5F96A1F14D72500E46882 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = E6856DRNEB;
-				INFOPLIST_FILE = RepoSearcherTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uptechteam.RepoSearcherTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVMRxSwiftNavigator.app/MVVMRxSwiftNavigator";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -656,15 +509,6 @@
 			buildConfigurations = (
 				8EB5F9661F14D72500E46882 /* Debug */,
 				8EB5F9671F14D72500E46882 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8EB5F9681F14D72500E46882 /* Build configuration list for PBXNativeTarget "MVVMRxSwiftNavigatorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8EB5F9691F14D72500E46882 /* Debug */,
-				8EB5F96A1F14D72500E46882 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
