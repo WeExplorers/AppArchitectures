@@ -117,26 +117,10 @@
 			children = (
 				8E2A2F7D1F17B2DC005C5FE7 /* BaseCoordinator.swift */,
 				8E2A2F811F17B628005C5FE7 /* AppCoordinator.swift */,
-				207892CD2447FE8400ECC812 /* RepositoryList */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		207892CD2447FE8400ECC812 /* RepositoryList */ = {
-			isa = PBXGroup;
-			children = (
 				8E2A2F781F17B2B0005C5FE7 /* RepositoryListCoordinator.swift */,
-				207892CE2447FE8F00ECC812 /* LanguageList */,
-			);
-			name = RepositoryList;
-			sourceTree = "<group>";
-		};
-		207892CE2447FE8F00ECC812 /* LanguageList */ = {
-			isa = PBXGroup;
-			children = (
 				8E2A2F7A1F17B2C1005C5FE7 /* LanguageListCoordinator.swift */,
 			);
-			name = LanguageList;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		8EB5F93F1F14D72500E46882 = {

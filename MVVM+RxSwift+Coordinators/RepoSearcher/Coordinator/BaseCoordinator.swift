@@ -48,7 +48,7 @@ class BaseCoordinator<ResultType> {
     ///
     /// - Parameter coordinator: Coordinator to start.
     /// - Returns: Result of `start()` method.
-    func coordinate<T>(to coordinator: BaseCoordinator<T>) -> Observable<T> {
+    final func coordinate<T>(to coordinator: BaseCoordinator<T>) -> Observable<T> {
         store(coordinator: coordinator)
         return coordinator.start().do(onNext: { [weak self] _ in
             self?.free(coordinator: coordinator)

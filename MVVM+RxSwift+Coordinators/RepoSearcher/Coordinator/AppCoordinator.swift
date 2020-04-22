@@ -21,4 +21,5 @@ class AppCoordinator: BaseCoordinator<Void> {
         let repositoryListCoordinator = RepositoryListCoordinator(window: window)
         return coordinate(to: repositoryListCoordinator)
     }
+    
 }
